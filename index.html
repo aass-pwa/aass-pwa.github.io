@@ -45,16 +45,16 @@
            * definiciones de estilos. Deben iniciar con -- y colocarse en el
            * elemento raíz. */
           --color-primario: rgb(255, 255, 255);
-          --color-primario-fondo: #3e6bbe;
-          --color-contenido: rgb(0, 0, 0);
+          --color-primario-fondo: #000000;
+          --color-contenido: rgb(255, 234, 27);
           --color-contenido-fondo: white;
           --color-control-sin-foco: gray;
-          --color-control-con-foco: #03a9f4;
+          --color-control-con-foco: #06cc0f;
           --color-control-error: #b00020;
           --color-control-fondo: #eeeeee;
           --color-active: #4646462c;
-          /** Los 2 primeros fonts son para apple y "Roboto" es para Android. */
-          --font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+ /** Los 2 primeros fonts son para apple y "Roboto" es para Android. */
+ --font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
           /* Uso de la custom property "--color-contenido". */
           color: var(--color-contenido);
           background-color: var(--color-contenido-fondo);
@@ -251,8 +251,9 @@
         }
         customElements.define("campo-dinámico", CampoDinámico);
       </script>
+
     </head>
- <body>
+  <body>
     <form action="javascript:;">
       <header>
         <div class="toolbar">
@@ -270,7 +271,6 @@
 
         <campo-dinámico>
           <input type="text" id="m" required pattern="[0-9]" title="Ingresa solo números enteros"/>
-
           <label for="m">m: masa (kg)</label>
           <small>Requerido</small>
         </campo-dinámico>
