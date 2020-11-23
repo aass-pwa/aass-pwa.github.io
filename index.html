@@ -133,44 +133,13 @@
           left: 1rem;
           font-size: 1rem;
           color: var(--color-control-sin-foco);
-          /* transition: 0.7s ease-in
-           * Cuando algún atributo cambie, lo hace lentamente
-           * 0.7s
-           * La transición tarda 0.7 segundos
-           * ease-in
-           * La transición inicia lento y luego acelera */
           transition: 0.7s ease-in;
         }
-  
-        /* La misma definición de estilos se aplicaca a 2 selectores diferentes
-         * separados por ",":
-         * campo-dinámico .control_sin_foco+label
-         *   Selecciona a un elemento "label" ubicado inmediatamente después de un
-         *   elemento hermano de la clase "control_sin_foco" y ambos elementos
-         *   están dentro de un custom element de tipo "campo-dinámico".
-         * campo-dinámico :focus+label
-         *   Selecciona a un elemento "label" ubicado inmediatamente después de un
-         *   elemento hermano que tiene el foco del teclado y ambos elementos
-         *   están dentro de un custom element de tipo "campo-dinámico". */
         campo-dinámico .control_sin_foco+label,
         campo-dinámico :focus+label {
           top: 0.5rem;
           font-size: 0.75rem;
         }
-  
-        /* La misma definición de estilos se aplicaca a 3 selectores diferentes
-         * separados por ",":
-         * campo-dinámico select
-         *   Selecciona a un elemento "select" dentro de un custom element de tipo
-         *   "campo-dinámico".
-         * campo-dinámico input
-         *   Selecciona a un elemento "input" dentro de un custom element de tipo
-         *   "campo-dinámico".
-         * campo-dinámico textarea
-         *   Selecciona a un elemento "textarea" dentro de un custom element de
-         *   tipo "campo-dinámico".
-         *   Un "textarea" es un control de captura de texto de varios renglones.
-         */
         campo-dinámico select,
         campo-dinámico input,
         campo-dinámico textarea {
@@ -207,23 +176,17 @@
         campo-dinámico textarea:focus {
           border-bottom-color: var(--color-control-con-foco);
         }
-  
-        /* :invalid
-         * Pseudoclase para seleccionar elementos que no cumplen las reglas de
-         * validación. */
         campo-dinámico select:invalid,
         campo-dinámico input:invalid,
         campo-dinámico textarea:invalid {
           border-bottom-color: var(--color-control-error);
         }
-  
-        /* campo-dinámico :invalid~small
-         *   Selecciona a los elementos "small" que van después de un elemento
-         *   hermano inválido y ambos elementos están dentro de un custom element
-         *   de tipo "campo-dinámico". */
         campo-dinámico :invalid+label,
         campo-dinámico :invalid~small {
           color: var(--color-control-error);
+        }
+        button {
+        font-weight: bold;
         }
       </style>
       <script>
@@ -265,7 +228,8 @@
       </header>
       <div class="contenido">
         <center><p><b>Energia Dinámica:<output id="agent"></output></b></p>
-        <p>La dinámica estudia las causas del movimiento de los cuerpos. En esta área, se estudian los diferentes tipos de fuerzas que intervienen en el movimiento.</p>
+        <p>La dinámica estudia las causas del movimiento de los cuerpos. En esta área, se estudian los diferentes tipos de fuerzas que intervienen en el movimiento.
+          <br>Por ejemplo: En el lanzamiento de cohetes se requiere estudiar las causas del movimiento.</br></p>
          <b>Fórmula: Fr=(m)(a) </b>
          <p> Fr = Fuerza resultante </p></center>
 
@@ -283,7 +247,7 @@
       </div>
       
     </form>
-    <center><button onclick="calcular();">calcular</button></center>
+   <center><button onclick="calcular();" style="background-color:rgb(255, 252, 64); height:50px; width:250px; font-size:25px;">Resolver</button></center>
  <script>
      
      function calcular() {
